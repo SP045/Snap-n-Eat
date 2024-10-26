@@ -1,0 +1,382 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Center Text Container */
+.center-text-container {
+    position: absolute; /* This allows it to ignore the layout of the other elements */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text vertically and horizontally */
+    text-align: center;
+    color: #030045;
+}
+
+.center-text-container h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.center-text-container h2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Adjust other sections to ensure alignment */
+.logos {
+    flex: 0 0 auto;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Sign In / Sign Up Buttons Container */
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Spacing between buttons */
+    margin-right: 10px; /* Optional padding from the right */
+}
+
+/* Common Button Style */
+.auth-buttons button {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Sign In Button Style */
+.btn-signin {
+    background-color: #2E5266;
+    color: white;
+}
+
+.btn-signin:hover {
+    background-color: #1C3745;
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Sign Up Button Style */
+.btn-signup {
+    background-color: #f58535;
+    color: white;
+}
+
+.btn-signup:hover {
+    background-color: #d6722a;
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .auth-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .auth-buttons button {
+        width: 100%; /* Buttons take full width on mobile */
+    }
+}
+
+
+/* Navigation bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(46, 82, 102, 10); 
+    border-radius: 35px; 
+    margin: 25px auto; 
+    margin-top: 15px;
+    width: 90%; 
+    box-sizing: border-box; 
+    align-items: center;
+    transition: background-color 0.3s, width 0.6s; 
+    backdrop-filter: blur(9px); 
+}
+
+.navbar.sticky {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    width: 100%; 
+    height: 90%;
+    border-radius: 0; 
+    margin: 100; 
+    z-index: 1000; 
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2E5266;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px; 
+    backdrop-filter: blur(4px); 
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #536a77;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #536a77;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        width: 95%; 
+        padding: 5px; 
+        border-radius: 40px; 
+        margin: 10px auto; 
+    }
+
+    .navbar a {
+        padding: 8px 12px; 
+        font-size: 12px; 
+    }
+
+    .dropdown-content {
+        min-width: 120px; 
+    }
+
+}
+    
+
+/* Charts Section Styling */
+.charts {
+    padding: 60px;
+    background-color: #e6e3df;
+    text-align: center;
+}
+
+#calorieChart {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #6E8898;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #9FB1BC;
+}
+
+/* Features Section */
+.features {
+    padding: 60px;
+    background-color: #e6e3df;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #2E5266;
+}
+
+.feature-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2E5266;
+}
+
+/* Container for 2x2 grid layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Calorie Tracker and Activity sections */
+.calorie-tracker, .activity {
+    padding: 60px;
+    text-align: center;
+    background-color: #9FB1BC;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.calorie-tracker h2, .activity h2 {
+    font-size: 36px;
+    color: #2E5266;
+}
+
+/* Paragraph styles */
+.calorie-tracker p, .activity p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Button styles */
+.cta-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2E5266;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #D3D0CB;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .calorie-tracker, .activity {
+        padding: 40px;
+    }
+
+    .calorie-tracker h2, .activity h2 {
+        font-size: 32px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2E5266;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #9FB1BC;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .cta-btn {
+        font-size: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}

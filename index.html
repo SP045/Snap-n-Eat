@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Visor - Snap & Count</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+
+    <!-- Header and Navigation Bar -->
+    <header class="header-container">
+        <div class="logos">
+            <a href="index.html"><img src="Media/logo-rbg.png" height="47" alt="Logos"></a>
+        </div>
+        <div class="center-text-container">
+            <h1>Snap 'N Count</h1>
+            <h2>Count everything you eat</h2>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn-signin" onclick="window.location.href='signin.html'">Sign In</button>
+            <button class="btn-signup" onclick="window.location.href='signup.html'">Sign Up</button>
+        </div>
+    </header>
+
+    <nav id="navbar" class="navbar">   
+        <img src="Media/logo-wbg.png" height="40px" alt="Acads Logo">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#">About &#9662;</a>
+            <div class="dropdown-content">
+                <a href="OurMission.html">Our Mission</a>
+                <a href="OurTeam.html">Our Team</a>
+            </div>
+        </div>
+        <a href="#features">Features</a>
+        <a href="#">Activity</a>
+        <a href="#">Calorie Tracker</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- Calorie Tracker Section -->
+        <section id="calorie-tracker" class="calorie-tracker">
+            <h2>Calorie Tracker</h2>
+            <p>Track your calories with ease. Upload your food photo and get instant results.</p>
+            <button class="cta-btn">Upload Photo</button>
+        </section>
+
+        <!-- Activity Section -->
+        <section id="activity" class="activity">
+            <h2>Burn Off Your Calories</h2>
+            <p>See how many steps or runs it takes to burn off your meal.</p>
+            <button class="cta-btn">Track Activity</button>
+        </section>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Features</h2>
+
+        <div class="feature-box">
+            <h3>Nutrition Breakdown</h3>
+            <p>Get detailed insights into the nutritional content of your meals, including macronutrients.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Coming Soon: Snap 'N Count</h3>
+            <p>A new way to track calorie counts in real-time, coming soon!</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Coming Soon: Graphs & Analytics</h3>
+            <p>Visualize your eating habits with interactive graphs and analytics, launching soon!</p>
+        </div>
+    </section>
+
+    <!-- Graph Section -->
+    <section id="charts" class="charts">
+        <h2>Your Meal Breakdown</h2>
+        <canvas id="calorieChart"></canvas> <!-- Chart.js Pie Chart -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Snap 'N Count - All Rights Reserved</p>
+        <p>Mini Project by S.Y. CSE(AIML)-A: A36, A42, A47, A48, A68</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/10/25/09/20241025095712-BJBVNEWS.js"></script>
+
+</body>
+</html>
